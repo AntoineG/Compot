@@ -1,0 +1,35 @@
+{% extends '::admin.html.twig' %}
+
+{% block content %}
+	<h1>Phrase creation - Step 2</h1>
+	
+	<h2>Phrase ID: {{ phrase.id }}</h2>
+	
+	<form action="{{ path('admin_phrase_create_2', { 'id' : phrase.id }) }}" method="post">
+		
+		<textarea cols="80" rows="3" disabled=disabled>	
+				{{ phrase.content }}
+		</textarea>
+		
+		<h2>Add Random Tags</h2>
+		
+	    {% for tag in phrase.tags %}
+			<fieldset>
+				<legend>{{ tag.id }}</legend>
+				<p>{{ tag.content }}</p>
+				<textarea cols="50" rows="5" name="randoms[{{ tag.id }}]"></textarea>
+			</fieldset>
+		{% endfor %}
+		
+		<p><button type="submit">Create</button></p>
+	</form>
+
+	<ul class="record_actions">
+	    <li>
+	        <a href="{{ path('admin_phrase') }}">
+	            Back to the list
+	        </a>
+	    </li>
+	</ul>
+
+{% endblock %}

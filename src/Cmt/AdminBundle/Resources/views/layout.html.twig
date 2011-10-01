@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %} CMS: Comme Au Potager{% endblock %}</title>
+		
+		 {% block stylesheets %}
+		        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/css/admin/main.css') }}" />
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/css/admin/dashboard.css') }}" />
+		{% endblock %}
+		
+		{% block scripts %}
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+			
+			
+			<script>
+				if ( typeof window.JSON === 'undefined' ) 
+					{ document.write('<script src="{{ asset('assets/js/admin/history-plugin/json2.js') }}"><\/script>'); }
+			</script>
+			<script src="{{ asset('assets/js/admin/history-plugin/amplify.store.js') }}"></script>
+			<script src="{{ asset('assets/js/admin/history-plugin/history.adapter.jquery.js') }}"></script>
+			<script src="{{ asset('assets/js/admin/history-plugin/history.js') }}"></script>
+			<script src="{{ asset('assets/js/admin/history-plugin/history.html4.js') }}"></script>
+			
+			<script type="text/javascript" src="{{ asset('assets/js/admin/init.js') }}"></script>
+			
+			<script type="text/javascript" src="{{ asset('assets/js/admin/feature/tag-system.js') }}"></script>
+			
+			<script type="text/javascript" src="{{ asset('assets/js/admin/eventListener.js') }}"></script>
+			
+		{% endblock %}
+		
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}
+		
+		<div id="global-container">
+		
+			<div id="side-bar">
+				<div id="header">
+					{% block header %}
+						{% include('CmtAdminBundle:Block:header.html.twig') %}
+					{% endblock %}
+				</div>
+			
+				<div id="side-bar-content">
+					{% block sidebarcontent %}
+						{% block naviguation %}
+							{% include('CmtAdminBundle:Block:naviguation.html.twig') %}
+						{% endblock %}
+					{% endblock %}
+				</div>
+			</div>
+		
+			<div id="container">
+				
+				<div id="content">
+				{% block content %}{% endblock %}
+				</div>
+				
+			</div>
+				
+		</div>
+		
+		<div id="footer">
+			{% block footer %}
+				{% include('CmtAdminBundle:Block:footer.html.twig') %}
+			{% endblock %}
+		</div>
+		
+		{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,358 @@
+<?php
+namespace Cmt\CoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+use Symfony\Component\Validator\Constraints as Assert;
+
+use SamJ\DoctrineSluggableBundle\SluggableInterface;
+
+/**
+ * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Cmt\CoreBundle\Entity\CityRepository")
+ * @ORM\Table(name="cities")
+ */
+class City implements SluggableInterface
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+	
+	/**
+	 * @ORM\OneToMany(targetEntity="Cmt\TagBundle\Entity\Phrase", mappedBy="city")
+     */
+	protected $phrases;
+	
+	/**
+     * @ORM\Column(type="integer")
+     */
+	protected $postalCode;
+	
+	/**
+     * @ORM\Column(type="integer")
+     */
+	protected $insee;
+	
+	/**
+     * @ORM\Column(type="string", length="255")
+     */
+	protected $name;
+	
+	/**
+     * @ORM\Column(type="integer")
+     */
+	protected $region;
+	
+	/**
+     * @ORM\Column(type="string", length="255")
+     */
+	protected $regionName;
+	
+	/**
+     * @ORM\Column(type="integer")
+     */
+	protected $dep;
+	
+	/**
+     * @ORM\Column(type="string", length="255")
+     */
+	protected $depName;
+	
+	/**
+     * @ORM\Column(type="float")
+     */
+	protected $long;
+	
+	/**
+     * @ORM\Column(type="float")
+     */
+	protected $lati;
+	
+	/**
+     * @ORM\Column(type="string", length="255")
+     */
+	protected $codex;
+	
+	/**
+     * @ORM\Column(type="string", length="255")
+     */
+	protected $metaphone;
+	
+	/**
+	 * @ORM\Column(type="string")
+     */
+    protected $slug;
+
+
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    public function setSlug($slug)
+    {
+        if (!empty($this->slug)) return false;
+        $this->slug = $slug;
+    }
+
+    public function getSlugFields() {
+        return $this->getName();
+    }
+	
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set postalCode
+     *
+     * @param integer $postalCode
+     */
+    public function setPostalCode($postalCode)
+    {
+        $this->postalCode = $postalCode;
+    }
+
+    /**
+     * Get postalCode
+     *
+     * @return integer 
+     */
+    public function getPostalCode()
+    {
+        return $this->postalCode;
+    }
+
+    /**
+     * Set insee
+     *
+     * @param integer $insee
+     */
+    public function setInsee($insee)
+    {
+        $this->insee = $insee;
+    }
+
+    /**
+     * Get insee
+     *
+     * @return integer 
+     */
+    public function getInsee()
+    {
+        return $this->insee;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set region
+     *
+     * @param integer $region
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+    }
+
+    /**
+     * Get region
+     *
+     * @return integer 
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
+     * Set regionName
+     *
+     * @param string $regionName
+     */
+    public function setRegionName($regionName)
+    {
+        $this->regionName = $regionName;
+    }
+
+    /**
+     * Get regionName
+     *
+     * @return string 
+     */
+    public function getRegionName()
+    {
+        return $this->regionName;
+    }
+
+    /**
+     * Set dep
+     *
+     * @param integer $dep
+     */
+    public function setDep($dep)
+    {
+        $this->dep = $dep;
+    }
+
+    /**
+     * Get dep
+     *
+     * @return integer 
+     */
+    public function getDep()
+    {
+        return $this->dep;
+    }
+
+    /**
+     * Set depName
+     *
+     * @param string $depName
+     */
+    public function setDepName($depName)
+    {
+        $this->depName = $depName;
+    }
+
+    /**
+     * Get depName
+     *
+     * @return string 
+     */
+    public function getDepName()
+    {
+        return $this->depName;
+    }
+
+    /**
+     * Set long
+     *
+     * @param float $long
+     */
+    public function setLong($long)
+    {
+        $this->long = $long;
+    }
+
+    /**
+     * Get long
+     *
+     * @return float 
+     */
+    public function getLong()
+    {
+        return $this->long;
+    }
+
+    /**
+     * Set lati
+     *
+     * @param float $lati
+     */
+    public function setLati($lati)
+    {
+        $this->lati = $lati;
+    }
+
+    /**
+     * Get lati
+     *
+     * @return float 
+     */
+    public function getLati()
+    {
+        return $this->lati;
+    }
+
+    /**
+     * Set codex
+     *
+     * @param string $codex
+     */
+    public function setCodex($codex)
+    {
+        $this->codex = $codex;
+    }
+
+    /**
+     * Get codex
+     *
+     * @return string 
+     */
+    public function getCodex()
+    {
+        return $this->codex;
+    }
+
+    /**
+     * Set metaphone
+     *
+     * @param string $metaphone
+     */
+    public function setMetaphone($metaphone)
+    {
+        $this->metaphone = $metaphone;
+    }
+
+    /**
+     * Get metaphone
+     *
+     * @return string 
+     */
+    public function getMetaphone()
+    {
+        return $this->metaphone;
+    }
+    public function __construct()
+    {
+        $this->phrases = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add phrases
+     *
+     * @param Cmt\TagBundle\Entity\Phrase $phrases
+     */
+    public function addPhrase(\Cmt\TagBundle\Entity\Phrase $phrases)
+    {
+        $this->phrases[] = $phrases;
+    }
+
+    /**
+     * Get phrases
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getPhrases()
+    {
+        return $this->phrases;
+    }
+}

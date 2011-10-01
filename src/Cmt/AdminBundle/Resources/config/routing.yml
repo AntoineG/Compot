@@ -1,0 +1,18 @@
+admin:
+    pattern: /
+    defaults: { _controller: CmtAdminBundle:Dashboard:index }
+    #requirements:
+    #    _scheme:  https
+ 
+admin_security_login:
+    pattern: /login
+    defaults: { _controller: CmtAdminBundle:Security:showLoginForm }
+    #requirements:
+    #    _scheme:  https 
+
+#Tag System
+admin_phrases:
+    type: rest
+    resource: Cmt\AdminBundle\Controller\Feature\TagSystemController
+    #requirements:
+    #    _scheme:  https

@@ -1,0 +1,15 @@
+{% extends base_template %}
+
+{% block content %}
+	
+	<h1>Erreur 404 est survenue</h1>
+	
+	<div id="content-inside">
+		
+		<p>La page demandée n'a pas été trouvée. Si vous êtes tombé sur cette page en suivant un lien présent sur ce site, merci de <a href="mailto:ticket@commeaupotager.fr">nous contacter</a>.
+		
+		<p><a href="{{ path('admin') }}">Retourner au Panneau d'Administration</a></p>
+		
+	</div>
+
+{% endblock %}

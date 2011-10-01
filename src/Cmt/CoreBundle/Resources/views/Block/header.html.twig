@@ -1,0 +1,9 @@
+<div id="actions">
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+		<p><b>{{ app.user.username|capitalize }}</b> | <a href="{{ path('fos_user_profile_show') }}">votre compte</a> | <a href="{{ path('fos_user_security_logout') }}">se déconnecter</a></p>
+	{% else %}
+		<p><a href="{{ path('fos_user_security_login') }}">Votre compte</a></p>
+	{% endif %}
+</div>
+
+<h2>Experts en référencement</h2>

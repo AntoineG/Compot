@@ -1,0 +1,102 @@
+#content .activity {
+	width:65%;
+	height:150px;
+	border:1px solid #CCC;
+	background-color:#FFF;
+	margin-left:3.5em;
+	font-size:13px;
+	font-weight:normal;
+	padding-bottom:1em;
+}
+
+#content .activity .container{
+	position:relative;
+	float:left;
+	width:48%;
+	margin-top:0.5em;
+}
+
+
+
+#content .activity .container .new{
+	background-color:#EFEFEF;
+	margin-top:0.5em;
+	min-height:15px;
+	padding:3px 0 3px 0;
+	overflow:auto;
+	-moz-border-radius-bottomright: 25px 50px;
+	border-bottom-right-radius: 25px 50px;
+}
+
+#content .activity .container .new .notification{
+	color:#333333;
+}
+
+#content .activity .container .new p{
+	margin:0;
+	padding:0;
+}
+
+#content .activity .container h4{
+	margin:0 1em 0 1em;
+	padding-bottom:1em;
+}
+
+#content .activity .container .new .notification .id{
+	float:left;
+	padding-left:3px;
+	color:#CCC;
+}
+
+#content .activity .container .new .notification .name{
+	float:left;
+	padding-left:4.7em;
+}
+
+#content .activity .container .new .notification .date{
+	float:right;
+	padding-right:5px;
+	color:gray;
+}
+
+#content .activity .container .information{
+	display:none;
+}
+
+#content .activity .container .new .information .name{
+	font-weight:bold;
+	font-size:15px;
+}
+
+#content .activity .container .new .email{
+	font-size:12px;
+}
+
+#content .activity .container .new .PC-city{
+	font-size:12px;
+	margin-bottom:1em;
+}
+
+#content .activity .container .new .phone-fix{
+	float:right;
+	clear:right;
+	width:10%;
+}
+
+#content .activity .container .new .phone-mobile{
+	float:right;
+	clear:right;
+	width:10%;
+}
+
+
+
+#content .activity ul{
+	list-style:none;
+	margin:0;
+	padding:5px 0 0 0;
+}
+
+#content .activity ul{
+	margin-bottom:0.1em;
+}

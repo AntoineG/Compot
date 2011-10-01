@@ -1,0 +1,9 @@
+# src/Cmt/CoreBundle/Resources/config/validation.yml
+Cmt\CoreBundle\Entity\User:
+    properties:
+        username:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+        plainPassword:
+            - NotBlank: ~

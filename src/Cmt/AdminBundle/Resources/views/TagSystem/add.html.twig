@@ -1,0 +1,51 @@
+{% extends base_template %}
+
+{% block content %}
+	<h1>Création de Phrase</h1>
+	
+	<h2>Créer</h2>
+	
+	<p>Pour créer et placer les mots clés obligatoires dans votre phrase, veuillez ajouter:</p>
+			
+	<ul class="sub dash">
+		<li>*city*</li>
+		<li>*keyword*</li>
+	</ul>
+			
+	<p>Pour créer des mots clés, ajoutez des crochets autour d'eux. <i>ex: [mot-clé]</i></p>
+	
+	
+	<form action="" method="post">
+
+		<div id="words">
+			
+			<p style="color:grey">Mots clés obligatoires:</p>
+			<ul class="list-comp">
+				<li class="city">City</li>
+				<li class="keyword">Keyword</li>
+			</ul>
+			
+			<p style="color:grey">Mot clés aléatoires:</p>
+			<ul class="list"></ul>
+		
+		</div>
+		
+		<div id="phrase">
+		
+			<p>{{ form_label(form.content) }}</p>
+			<p>{{ form_widget(form.content, { 'attr': { 'style': 'color:grey' } } ) }}</p>
+
+		</div>
+		
+		<p style="float:left;margin:0 0 1.5em 0;padding:0">Séparez les mots clés par des virgules.</p>
+		
+		<div id="random-words">			
+		</div>
+		
+	    <p><button type="submit">Créer</button></p>
+	</form>
+	
+	<form action="" method="post" enctype="multipart/form-data">
+		
+	</form>
+{% endblock %}

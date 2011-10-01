@@ -1,0 +1,20 @@
+{% extends base_template %}
+
+
+{% block content %}
+
+	<h1>Gestion des Phrases Aléatoires</h1>
+	
+<div id="content-inside">
+	
+	<h2>Edition - Phrase No. {{ phrase.id }}</h2>
+	
+	<ul>
+	{% for word in words %}
+		<li>{{ word }}</li>
+	{% endfor %}
+	</ul>
+	
+</div>
+	
+{% endblock %}

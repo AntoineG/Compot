@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+	<h2>La page demandée n'existe pas !</h2>
+	
+	<p>{{ exception.message }}</p>
+	
+	<p><a href="{{ url('home') }}">Retournez à la page d'accueil</a></p>
+{% endblock %}

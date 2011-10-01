@@ -1,0 +1,7 @@
+parameters:
+#    cmt_tag.example.class: Cmt\TagBundle\Example
+
+services:
+#    cmt_tag.example:
+#        class: %cmt_tag.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,41 @@
+{% extends base_template %}
+
+
+{% block content %}
+	<h1>Gestion des Phrases Aléatoires</h1>
+
+<div id="content-inside">
+	<h2>Liste des phrases</h2>
+	
+	<table>
+	  <tbody>
+	    <tr>
+	      <th>ID</th>
+	      <th>Phrase</th>
+	      <th>Balises</th>
+	      <th>Balises Aléatoires</th>
+	      <th>Actions</th>
+	    </tr>
+		{% for phrase in phrases %}
+			<tr>
+				<td class="id">{{ phrase.id }}</td>
+				<td>{{ phrase.content|truncate(20) }}</td>
+				<td>{{ phrase.tags|length }}</td>
+				<td>
+					{% set nbRandoms = 0 %}
+					{% for tag in phrase.tags %}
+						{% set nbRandoms = nbRandoms + tag.randoms|length %}
+					{% endfor %}
+					{{ nbRandoms }}
+				</td>
+				<td class="actions"><a href="{{ path('edit_phrase', { 'id': phrase.id}) }}"><img src="{{ asset('assets/images/icons/edit.png') }}" width="20" alt="Edition"/></a>  <a href="#"><img src="{{ asset('assets/images/icons/delete.png') }}" width="20" alt="Suppression"/></td>
+			</tr>
+		{% endfor %}
+	  </tbody>
+	</table>
+	
+	<p><a href="{{ path('add_phrase') }}"><button type="button">Ajouter</button></a></p>
+
+</div>
+	
+{% endblock %}

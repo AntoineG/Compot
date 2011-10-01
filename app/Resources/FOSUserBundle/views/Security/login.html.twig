@@ -1,0 +1,23 @@
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+<h2>Connectez-vous</h2>
+
+	{% if error %}
+	    <div>{{ error }}</div>
+	{% endif %}
+
+	<form action="{{ path("fos_user_security_check") }}" method="post">
+	    <p><label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+	    <input type="text" id="username" name="_username" value="{{ last_username }}" /></p>
+
+	    <p><label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+	    <input type="password" id="password" name="_password" /></p>
+		
+		<p><label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}:</label>
+	    <input type="checkbox" id="remember_me" name="_remember_me" value="on" /></p>
+
+	    <p class="button"><input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" /></p>
+	</form>
+{% endblock %}

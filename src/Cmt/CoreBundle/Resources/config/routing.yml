@@ -1,0 +1,35 @@
+home:
+    pattern: /
+    defaults: { _controller: CmtCoreBundle:Guest:index }
+
+prospect:
+    pattern: /professionnel
+    defaults: { _controller: CmtCoreBundle:Prospect:index }
+
+search:
+    pattern:  /recherche/{keyword}/{city}
+    defaults: { _controller: CmtCoreBundle:Guest:index }
+    options:
+            expose: true
+            
+autocomplete_postal_code:
+    pattern: /autocomplete/postal-code
+    defaults: { _controller: CmtCoreBundle:Autocomplete:postalCode, _format: json }
+    requirements: { _format: (xml|json), _method: GET }
+    options:
+            expose: true
+
+autocomplete_city:
+    pattern: /autocomplete/city
+    defaults: { _controller: CmtCoreBundle:Autocomplete:city, _format: json }
+    requirements: { _format: (xml|json), _method: GET }
+    options:
+            expose: true
+            
+autocomplete_search_cities:
+    pattern: /autocomplete/search/cities
+    defaults: { _controller: CmtCoreBundle:Autocomplete:searchCities, _format: json }
+    requirements: { _format: (xml|json), _method: GET }
+    options:
+            expose: true
+    

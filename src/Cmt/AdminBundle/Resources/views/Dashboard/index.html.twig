@@ -1,0 +1,72 @@
+{% extends base_template %}
+
+{% block content %}
+	<h1>Panneau d'Administration</h1>
+
+<div id="content-inside">
+		
+	<h2>Dashboard</h2>
+	
+	<p>Bienvenue <b>{{ app.user.username|capitalize }}</b>,
+	</p>
+	
+	<h3>Récentes Activités</h3>
+	
+	<div class="activity">
+		<div class="container">
+			<h4>Nouveaux Visiteurs</h4>
+			
+			<div class="new">
+				<p class="notification unread"><span class="id">#1</span> <span class="name">Tobias Hourst</span> <span class="date">17/09/11</span></p>
+				<ul class="information">
+					<li class="name">Tobias Hourst</li>
+					<li class="email"><a href="tobias@strawberrydigital.com.au">tobias@strawberrydigital.com.au</a></li>
+					<li class="address">1 avenue des sablonnières,</li>
+					<li class="PC-city">01210, Ferney-Voltaire</li>
+					<li class="phone-fix">(+33) 4 50 28 09 73</li>
+					<li class="phone-mobile">(+33) 4 50 28 09 73</li>
+				</ul>
+			</div>
+			
+			<div class="new">
+				<p class="notification unread"><span class="id">#1</span> <span class="name">Antoine Girard</span> <span class="date">13/09/11</span></p>
+				<ul class="information">
+					<li class="name">Tobias Hourst</li>
+					<li class="email"><a href="tobias@strawberrydigital.com.au">tobias@strawberrydigital.com.au</a></li>
+					<li class="address">1 avenue des sablonnières,</li>
+					<li class="PC-city">01210, Ferney-Voltaire</li>
+					<li class="phone-fix">(+33) 4 50 28 09 73</li>
+					<li class="phone-mobile">(+33) 4 50 28 09 73</li>
+				</ul>
+			</div>
+			
+			<div class="new">
+				<p class="notification"><span class="id">#1</span> <span class="name">Logan Lehman</span> <span class="date">11/09/11</span></p>
+				<ul class="information">
+					<li class="name">Tobias Hourst</li>
+					<li class="email"><a href="tobias@strawberrydigital.com.au">tobias@strawberrydigital.com.au</a></li>
+					<li class="address">1 avenue des sablonnières,</li>
+					<li class="PC-city">01210, Ferney-Voltaire</li>
+					<li class="phone-fix">(+33) 4 50 28 09 73</li>
+					<li class="phone-mobile">(+33) 4 50 28 09 73</li>
+				</ul>
+			</div>
+			
+			<div class="new">
+				<p class="notification"><span class="id">#1</span> <span class="name">John Doe</span> <span class="date">27/08/11</span></p>
+				<ul class="information">
+					<li class="name">Tobias Hourst</li>
+					<li class="email"><a href="tobias@strawberrydigital.com.au">tobias@strawberrydigital.com.au</a></li>
+					<li class="address">1 avenue des sablonnières,</li>
+					<li class="PC-city">01210, Ferney-Voltaire</li>
+					<li class="phone-fix">(+33) 4 50 28 09 73</li>
+					<li class="phone-mobile">(+33) 4 50 28 09 73</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+
+</div>
+	
+{% endblock %}

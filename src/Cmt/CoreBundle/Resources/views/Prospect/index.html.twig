@@ -1,0 +1,47 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+	<h2>vous êtes prestataire ?</h2>
+	<h3>remplissez ce formulaire et nous vous répondrons dans les plus bref délais !</h3>
+	
+	<form action="{{ path('prospect')  }}" method="post" {{ form_enctype(form) }} novalidate>
+		<fieldset>
+				
+				{{ form_row(form.username) }}
+				
+				{{ form_row(form.email) }}
+				
+				{{ form_row(form.plainPassword) }}
+				
+				{{ form_row(form.prospect.type) }}
+				
+				{{ form_row(form.prospect.companyName) }}
+				
+				{{ form_row(form.prospect.siret) }}
+				
+				{{ form_row(form.prospect.contactName) }}
+				
+				{{ form_row(form.prospect.address) }}
+				
+				{{ form_row(form.prospect.postalCode) }}
+				
+				{{ form_row(form.prospect.phoneFix) }}
+				
+				{{ form_row(form.prospect.phoneMobile) }}
+				
+				{{ form_row(form.prospect.fax) }}
+				
+				{{ form_row(form.prospect.website) }}
+				
+				{{ form_row(form._token) }}
+				
+				<p class="info">(tout champ est obligatoire)</p>
+				
+				<p class="button"><input type="submit" value="Envoyer" name="submit" /></p>
+				
+		</fieldset>
+	</form>
+	
+	<p>{% render 'CmtTagBundle:Default:index' %}</p>
+{% endblock %}

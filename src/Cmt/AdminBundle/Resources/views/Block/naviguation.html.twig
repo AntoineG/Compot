@@ -1,0 +1,32 @@
+<h1>Navigation</h1>
+
+	<ul class="naviguation">
+		<li><a href="{{ path('admin') }}">Panneau d'Administration</a></li>
+		
+		<hr />
+				
+		<li><a href="#">Gestion des Utilisateurs</a></li>
+		<li class="no-list-style"><ul>{% block nav_user_man %}{% endblock %}</ul></li>
+		
+		<li><a href="#">Gestion des Visiteurs</a></li>
+		
+		<hr />
+		
+		<li><a href="{{ path('get_phrases') }}">Gestion des Phrases Aléatoires</a></li>
+			<li class="no-list-style">
+				<ul>
+				{% block nav_tag_sys %}
+					<li><a href="{{ path('get_phrases') }}">Liste des phrases</a></li>
+					<li><a href="#">Ajouter une phrase</a></li>
+					<li><a href="#">Importer un fichier</a></li>
+				{% endblock %}
+				</ul>
+			</li>
+			<li>TESTS</li>
+			<li>
+				<ul>
+					<li><a href="thispagedoesntexist">throw a 404 error</a></li>
+				</ul>
+			</li>
+		<li>
+	</ul>

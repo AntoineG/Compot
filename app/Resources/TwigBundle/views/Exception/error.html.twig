@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+	<h2>Une erreur {{ exception.statuscode }} s'est produite!</h2>
+	
+	<p>{{ exception.message }}</p>
+	
+	<p><a href="{{ url('home') }}">Retournez à la page d'accueil</a></p>
+{% endblock %}

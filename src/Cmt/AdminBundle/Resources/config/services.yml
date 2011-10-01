@@ -1,0 +1,18 @@
+services:
+    cmt_admin.init.action_listener:
+        class: Cmt\AdminBundle\EventListener\AdminActionListener
+        arguments: [@service_container]
+        tags:
+            -   { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+            
+    cmt_admin.response.action_listener:
+        class: Cmt\AdminBundle\EventListener\AdminActionListener
+        arguments: [@service_container]
+        tags:
+            -   { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+            
+    cmt_admin.exception.action_listener:
+        class: Cmt\AdminBundle\EventListener\AdminActionListener
+        arguments: [@service_container]
+        tags:
+            -   { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

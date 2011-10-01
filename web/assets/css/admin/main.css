@@ -1,0 +1,383 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+#footer{
+	color:#B3B3B3;
+	min-height:30px;
+	width:1024px;
+	clear:both;
+	font-size:13px;
+}
+
+#footer p{
+	text-align:center;
+}
+
+#global-container{
+	position:relative;
+	width:1100px;
+	overflow:auto;
+	box-shadow: 0px 0 4px #4C4C4C;
+	background-color:#F8F8F8;
+	padding-bottom:1em;
+}
+
+#side-bar{
+	float:left;
+	position:relative;
+	background-color:#FFF;
+	min-height:500px;
+	width:23.9%;
+	color:#282828;
+	padding-left:1%;
+	border-right:1px solid #CCC;
+	-moz-box-shadow: 0 0 5px 2px #CCC;
+	-webkit-box-shadow: 0 0 5px 2px #CCC;
+	box-shadow: 0 0 4px 1px #CCC;
+	z-index:9;
+}
+
+#header{
+	overflow:auto;
+	margin-top:1em;
+}
+
+#header .icon{
+	float:left;
+	width:20%;
+}
+
+#header .logged-user{
+	float:right;
+	font-size:11px;
+	color:#CCC;
+	padding-right:1em;
+}
+
+#header .logged-user .username{
+	font-weight:bold;
+	color:#282828;
+}
+
+#header h1{
+	margin:0;
+	width:75%;
+	font-size:20px;
+	float:left;
+	margin-left:5%;
+	margin-top:0.5em;
+	color:#70B3FF;
+	text-shadow: 0px 0 3px #FFFBEB;
+}
+
+#header h2{
+	float:right;
+	padding-right:5%;
+	font-size:17px;
+	color:#CCC;
+}
+
+#header h3{
+	clear:right;
+	float:right;
+	padding-right:5%;
+	margin:0;
+	font-size:13px;
+	color:#CCC;
+	font-weight:normal;
+}
+
+#header h3 .version{
+	color:skyblue;
+}
+
+#side-bar-content{
+	position:relative;
+	clear:both;
+	margin-top:2em;
+	font-family:"Arial";
+	z-index:0;
+}
+
+#side-bar-content .naviguation a{
+	color:#FF8000;
+}
+
+#side-bar-content .naviguation li{
+	list-style-image:url(../../images/list-style.png);
+	margin-bottom:10px;
+}
+
+#side-bar-content .naviguation .no-list-style{
+	list-style:none;
+	list-style-image:none;
+}
+
+#side-bar-content .naviguation > li{
+	font-size:15px;
+}
+
+#side-bar-content .naviguation > li > ul > li{
+	margin-top:-5px;
+	font-size:13px;
+}
+
+#side-bar-content .naviguation > li > ul > li a{
+	color:#E7B95F;
+}
+
+#side-bar-content .naviguation hr{
+	color:#CCC;
+	background-color:#CCC;
+	border:0;
+	height:1px;
+}
+
+#container{
+	float:left;
+	width:75%;
+	min-height:500px;
+	background-color:#F8F8F8;
+	color:#3F3F3F;
+	font-family:"times new roman";
+	font-size:14px;
+}
+
+
+#content p{
+	padding-left:3em;
+}
+
+#content h1{
+	color:#70B3FF;
+	border-bottom:1px solid #CCC;
+	background-color:#FFF;
+	text-align:center;
+	padding:0.5em 0 0.5em 0;
+	margin:0;
+}
+
+#content h2{
+	color:#282828;
+	padding-left:1.5em;
+}
+
+
+#content h3{
+	color:#999999;
+	margin-top:1.5em;
+	padding-left:3.5em;
+	margin-bottom:0.5em;
+}
+#content p{
+	color:#282828;
+	margin-left:1em;
+}
+
+#content table{
+	margin-left:3em;
+	width:70%;
+	text-align:center;
+	font-size:13px;
+}
+
+#content table th {
+	background-color:#59B3E3;
+	color:#FFF;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+#content table td{
+	padding:0 5px 0 5px;
+	height:25px;
+}
+
+#content table tr .id{
+	color:#CCC;
+}
+
+#content table tr .actions a{
+	padding-right:1em;
+}
+
+
+ul{
+	margin:0;
+	padding-left:2em;
+}
+
+a{
+	color:#FF8000;
+	text-decoration:none;
+}
+
+a img{
+	border:0;
+}
+
+.loader{
+	display:none;
+}
+
+/*------
+* FORMS
+*------
+*/
+form{
+	width:550px;
+	margin-left:4em;
+	position:relative;
+	overflow:auto;
+	padding-bottom:1em;
+}
+
+form fieldset{
+	border:0;
+}
+
+form label{
+	float:left;
+	clear:left;
+	width:200px;
+	color:#276e2e;
+}
+
+form input, form select{
+	float:left;
+	width:200px;
+	margin-bottom:1em;
+}
+
+form textarea{
+	float:left;
+	width:300px;
+	height:100px;
+	margin-bottom:1em;
+}
+
+form input[type=checkbox]{
+	float:left;
+	margin-top:1em;
+	width:1em;
+}
+
+form p[class=button]{
+	clear:left;
+	text-align:center;
+	margin:1em auto 0 auto;
+	width:auto;
+	clear:both;
+}
+
+form input[type=submit]{
+	width:auto;
+	margin:1em auto 0 auto;
+	text-align:center;
+	border:1px solid #CCC;
+	background-color:#282828;
+	color:#FFF;
+	clear:both;
+}
+
+form button[type=submit]{
+	float:left;
+	width:auto;
+	margin:1em auto 0 auto;
+	text-align:center;
+	clear:both;
+}
+
+form .error-field{
+	border-color:red;
+}
+
+form #words{
+	float:right;
+}
+
+form #words p{
+	margin:1em 0 1em 0;
+	padding:0;
+}
+
+form #words .list{
+	width:125px;
+	height:300px;
+	background-color:#FFF;
+	border:1px solid #CCC;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+form #words .list-comp{
+	width:125px;
+	height:40px;
+	background-color:#FFF;
+	border:1px solid #CCC;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+form #words .list li{
+	padding-left:3px;
+	cursor:default;
+}
+
+form #words .list-comp li{
+	padding-left:3px;
+	cursor:default;
+	color:red;
+}
+
+form #words .list-comp li.set{
+	color:green;
+}
+
+form #words .list .selected{
+	background-color:orange;
+}
+
+form #random-words{
+	float:left;
+	cleaR:left;
+}
+
+form #random-words .list-assoc{
+	width:300px;
+	height:25px;
+	background-color:#FFF;
+	border:1px solid #CCC;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+form #random-words p{
+	padding:0;
+	margin:0;
+}
+
+form #phrase{
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+form #phrase p{
+	margin:0;
+	padding:0;
+}
+
+ul.sub{
+	margin-left:4em;
+	color:grey;
+}
+
+ul.dash li{
+	list-style-image:url(../../images/list-style.png);
+}

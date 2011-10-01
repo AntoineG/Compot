@@ -1,0 +1,24 @@
+{% extends '::admin.html.twig' %}
+
+{% block content %}
+	<h1>Phrase creation - Step 1</h1>
+	
+	<p>To create tags, simply put them inside square brackets. <i>ex: [tag]</i></p>
+	
+	<form action="{{ path('admin_phrase_create') }}" method="post">
+	    <h2>Phrase:</h2>
+		<p><textarea rows="10" cols="50" name="phrase"></textarea></p>
+
+	    <p>
+	        <button type="submit">Create</button>
+	    </p>
+	</form>
+
+	<ul class="record_actions">
+	    <li>
+	        <a href="{{ path('admin_phrase') }}">
+	            Back to the list
+	        </a>
+	    </li>
+	</ul>
+{% endblock %}

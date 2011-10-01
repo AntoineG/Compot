@@ -1,0 +1,34 @@
+#admin_phrase:
+#    pattern:  /admin/phrase
+#    defaults: { _controller: CmtTagBundle:Admin\Phrase:index }
+
+#admin_phrase_show:
+#    pattern:  /admin/phrase/{id}/show
+#    defaults: { _controller: CmtTagBundle:Admin\Phrase:show }
+
+#admin_phrase_new:
+#    pattern:  /admin/phrase/new/step1
+#    defaults: { _controller: CmtTagBundle:Admin\Phrase:new }
+
+#admin_phrase_create:
+#    pattern:  /admin/phrase/create
+#    defaults: { _controller: CmtTagBundle:Admin\Phrase:create }
+#    requirements: { _method: post }
+
+#admin_phrase_create_2:
+#    pattern:  /admin/phrase/{id}/new/step2
+#    defaults: { _controller: CmtTagBundle:Admin\Phrase:create2 }
+
+#admin_phrase_edit:
+#    pattern:  /admin/phrase/{id}/edit
+#    defaults: { _controller: CmtTagBundle:Admin\Phrase:edit }
+
+#admin_phrase_update:
+#    pattern:  /admin/phrase/{id}/update
+#    defaults: { _controller: CmtTagBundle:Admin\Phrase:update }
+#    requirements: { _method: post }
+
+#admin_phrase_delete:
+#    pattern:  /admin/phrase/{id}/delete
+#    defaults: { _controller: CmtTagBundle:Admin\Phrase:delete }
+#    requirements: { _method: post }
